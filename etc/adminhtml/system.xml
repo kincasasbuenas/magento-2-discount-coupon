@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Copyright (c) 2024 - Kevin casasbuenas (https://kincasasbuenas.dev/)
+ * @author      Kevin Casasbuenas <kincasasbuenas@outlook.com>
+ * @category    Kinuz
+ * @module      Kinuz/DiscountCoupon
+ */ 
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <section id="discount_coupon" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+      <class>separator-top</class>
+      <label>Discount Coupon</label>
+      <tab>kinuz</tab>
+      <resource>Kinuz_DiscountCoupon::system_config</resource>
+      <group id="general" type="text" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Configuration General</label>
+        <field id="enable" translate="" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Enable</label>
+            <comment>Enable or disabled Form discount coupon in sidebar checkout</comment>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+      </group>
+    </section>
+  </system>
+</config>

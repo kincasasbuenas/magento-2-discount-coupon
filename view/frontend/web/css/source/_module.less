@@ -1,0 +1,78 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .checkout-index-index .opc-sidebar{
+        .form-discount {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            gap: 10px;
+
+            .label {
+                display: none;
+            }
+
+            .payment-option-inner {
+                flex: 1;
+            }
+
+            .actions-toolbar button {
+                margin: 0;
+            }
+        }
+
+        .opc-payment-additional.discount-code {
+            .payment-option-title {
+                border-bottom: 1px solid #cccccc;
+                padding: 10px 40px 10px 0;
+                cursor: pointer;
+                display: block;
+                text-decoration: none;
+                margin-bottom: 0;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    top: 10px;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: inherit;
+                    content: '\e622';
+                    font-family: @icons__font-name; //luma-icons
+                    margin: 3px 0 0;
+                    vertical-align: middle;
+                    display: inline-block;
+                    font-weight: normal;
+                    overflow: hidden;
+                    speak: none;
+                    text-align: center;
+                }
+
+                span {
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                }
+            }
+
+            &._active {
+                .payment-option-title {
+                    &::after {
+                        content: '\e621';
+                    }
+                }
+            }
+
+            .payment-option-content {
+                padding: 15px 0;
+            }
+        }
+
+        .block.items-in-cart {
+            margin-bottom: 30px;
+        }
+    }
+}
